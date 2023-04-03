@@ -7,14 +7,14 @@ class ApiBase:
         self.base_url = base_url
         print("this is called")
 
-    def get(self, endpoint, params=None):
-        url = self.base_url + endpoint
+    def get(self,endpoint, params=None):
+        url = f"{self.base_url}/{endpoint}"
         response = requests.get(url, params=params)
         response.raise_for_status()
         return response.json()
 
     def post(self, endpoint, data):
-        url = self.base_url + endpoint
+        url = f"{self.base_url}/{endpoint}"
         response = requests.post(url, json=data)
         response.raise_for_status()
         return response.json()

@@ -1,18 +1,15 @@
-from core.api import ApiBase
+import sys
+ 
 
+sys.path.append("..")
+from core.api import ApiBase
+from demoapi.todos.api import Todo
+from demoapi.products.api import Product
 class DemoAPi(ApiBase):
     def __init__(self, base_url):
         super().__init__(base_url)
+        self.todo = Todo(f"{base_url}/todos")
+        self.product=Product(f"{base_url}/products")
 
-    def get_product(self,product_id):
-        endpoint = f"/products/{product_id}"
-        return self.get(endpoint)
-
-    def get_all_products(self):
-        endpoint = "/products"
-        return self.get(endpoint)
-
-    def post_product(self, collection_data):
-        endpoint = "/products/add"
-        return self.post(endpoint, collection_data)
+   
 
