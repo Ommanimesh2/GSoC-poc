@@ -8,14 +8,13 @@ class Todo(ApiBase):
     def __init__(self,base_url):
         self.base_url=base_url
         
-    def get(self,todo_id=None):
-        if todo_id is None:
-            endpoint = ""
-            return ApiBase.get(self,endpoint)
-        else:
-            endpoint = todo_id
-            return ApiBase.get(self,endpoint)
-        
+    def get(self,id=None):
+        endpoint = id
+        return ApiBase.get(self,endpoint)
+   
+    def all (self):
+        endpoint=""
+        return ApiBase.get(self,endpoint)
 
  
         

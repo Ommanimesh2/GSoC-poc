@@ -10,7 +10,7 @@ class TestDummyJsonClient(unittest.TestCase):
         self.assertIsInstance(products, list)
 
     def test_get_product(self):
-        product = self.client.products.get(1)
+        product = self.client.products.get(id=1)
         self.assertIsInstance(product, dict)
         self.assertEqual(product['id'], 1)
 
@@ -20,6 +20,6 @@ class TestDummyJsonClient(unittest.TestCase):
         self.assertEqual(todos, list)
 
     def test_get_product(self):
-        todo = self.client.products.get(1)
+        todo = self.client.products.get(id=1)
         self.assertIsInstance(todo, dict)
         self.assertEqual(todo['id'], 1)
