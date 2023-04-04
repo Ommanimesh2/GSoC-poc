@@ -14,4 +14,4 @@ Some basic commands are
 #### For the Client API
 > Refer to the `client.py` in `src` directory for more information
 
-#### You can also view the publised package [Here](https://test.pypi.org/project/ExtensibleAPIClient-ommanimesh/)
+#### You can also view the publised package [Here](https://test.pypi.org/project/wrapperclient/0.1.0/)
